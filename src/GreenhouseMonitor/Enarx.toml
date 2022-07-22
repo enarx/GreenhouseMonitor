@@ -12,3 +12,5 @@ kind = "listen"
 prot = "tcp"
 port = 5000
 name = "SERVER"
+addr = "0.0.0.0"
+

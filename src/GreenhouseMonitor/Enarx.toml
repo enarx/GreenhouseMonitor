@@ -10,7 +10,7 @@ kind = "stderr"
 [[files]]
 kind = "listen"
 prot = "tcp"
-port = 5000
+port = 11000
 name = "SERVER"
 addr = "0.0.0.0"
 

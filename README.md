@@ -29,9 +29,9 @@ Then:
    * `dotnet run`
    * Or, if you're using Visual Studio, press Ctrl+F5
    * Or, if you prefer to invoke wasmtime manually:
-     * `wasmtime bin/Debug/net7.0/GreenhouseMonitor.wasm --tcplisten 0.0.0.0:5000`
+     * `wasmtime bin/Debug/net7.0/GreenhouseMonitor.wasm --tcplisten 0.0.0.0:11000`
      * Note that if you use this mechanism, it's your job to remember to do a `dotnet build` each time you make further code changes.
- * Browse to http://localhost:5000
+ * Browse to http://localhost:11000
 
 This assumes `wasmtime` is available on your system `PATH`.
 
@@ -44,7 +44,7 @@ Now, if you want to send some simulated sensor data via gRPC-Web,
 ## How to attach a debugger
 
  * Start the application using this command:
-   * `wasmtime bin/Debug/net7.0/GreenhouseMonitor.wasm --tcplisten 0.0.0.0:8001 --tcplisten 0.0.0.0:5000 --env DEBUGGER_FD=3`
+   * `wasmtime bin/Debug/net7.0/GreenhouseMonitor.wasm --tcplisten 0.0.0.0:8001 --tcplisten 0.0.0.0:11000 --env DEBUGGER_FD=3`
    * Open VS Code inside the `src/GreenhouseMonitor` directory (e.g., run `code .` from there)
    * Ensure you have the [Mono Debugger](https://marketplace.visualstudio.com/items?itemName=ms-vscode.mono-debug) extension installed
    * Set a breakpoint somewhere in the .NET code
